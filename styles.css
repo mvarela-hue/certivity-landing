@@ -1798,6 +1798,13 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     margin-top: 12px;
 }
 
+/* Faster carousel on mobile */
+@media (max-width: 768px) {
+  .carousel-track {
+    animation-duration: 20s; /* was 45s — more than 2x faster */
+  }
+}
+
 
 /* ==============
    RESPONSIVE
@@ -1918,6 +1925,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
 
