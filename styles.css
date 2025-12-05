@@ -1661,32 +1661,48 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
   .footer-content { flex-direction: column; }
 }
 
-/* ============================
-   MOBILE HEADER FIX
-   ============================ */
-@media (max-width: 768px) {
-    .header {
-        padding: 20px;
-        height: auto;
-    }
+/* -----------------------------
+   MOBILE HEADER (≤600px)
+   Logo centrado arriba
+   Idioma + CTA en una fila debajo
+------------------------------*/
+@media (max-width: 600px) {
 
-    .header .header-inner {
+    .header-content {
+        display: flex;
         flex-direction: column;
-        gap: 16px;
-        align-items: flex-start;
+        align-items: center;
+        gap: 14px;
     }
 
-    .header .logo img {
+    .logo-img {
+        margin: 0 auto;
         width: 150px;
     }
 
-    .header .cta-button {
-        padding: 12px 24px;
+    .nav {
+        display: none; /* Ocultar el menú para mobile */
+    }
+
+    .header-actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
         width: 100%;
-        text-align: center;
-        font-size: 1rem;
+    }
+
+    .lang-switcher {
+        font-size: 15px;
+    }
+
+    .btn-primary {
+        padding: 10px 22px;
+        font-size: 15px;
     }
 }
+
 
 /* Problem grid responsive */
 @media (max-width: 768px) {
@@ -1737,4 +1753,5 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
