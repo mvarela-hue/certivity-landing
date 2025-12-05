@@ -1798,24 +1798,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     margin-top: 12px;
 }
 
-/* --------- TRUST CAROUSEL — MOBILE TUNING --------- */
-@media (max-width: 768px) {
 
-  .trust-track {
-    gap: 20px; /* antes 40px, menos aire = más logos visibles */
-  }
-
-  .trust-logo-card {
-    min-width: 150px;   /* antes 220px */
-    padding: 18px 28px; /* un poco más compacto */
-  }
-}
-
-@media (max-width: 768px) {
-  .trust-track {
-    animation-duration: 80s;
-  }
-}
 
 
 /* ==============
@@ -1937,6 +1920,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
 
