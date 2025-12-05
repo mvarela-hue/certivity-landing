@@ -1661,47 +1661,52 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
   .footer-content { flex-direction: column; }
 }
 
-/* -----------------------------
-   MOBILE HEADER (≤600px)
-   Logo centrado arriba
-   Idioma + CTA en una fila debajo
-------------------------------*/
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 14px;
-    }
+  .logo-img {
+    width: 140px;
+    height: auto;
+  }
 
-    .logo-img {
-        margin: 0 auto;
-        width: 150px;
-    }
+  .nav {
+    display: none; /* Opcional: oculta menú en mobile */
+  }
 
-    .nav {
-        display: none; /* Ocultar el menú para mobile */
-    }
+  .lang-switcher,
+  .btn-primary {
+    display: inline-block;
+    text-align: center;
+  }
 
-    .header-actions {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 22px;
-        width: 100%;
-    }
+  .lang-switcher {
+    margin-right: 12px;
+  }
 
-    .lang-switcher {
-        font-size: 15px;
-    }
+  .header .lang-switcher,
+  .header .btn-primary {
+    margin: 0;
+  }
 
-    .btn-primary {
-        padding: 10px 22px;
-        font-size: 15px;
-    }
+  .header-content > .lang-switcher,
+  .header-content > .btn-primary {
+    display: inline-block;
+  }
+
+  /* Agrupa botón y cambio de idioma en una fila centrada */
+  .mobile-lang-btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
 }
+
 
 
 /* Problem grid responsive */
@@ -1753,5 +1758,6 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
