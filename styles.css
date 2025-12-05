@@ -392,7 +392,7 @@ a {
   gap: 40px;
   align-items: center;
   white-space: nowrap;
-  animation: trustScroll 18s linear infinite; /* velocidad final */
+  animation: trustScroll 12s linear infinite; /* velocidad final */
 }
 
 @keyframes trustScroll {
@@ -1798,12 +1798,19 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     margin-top: 12px;
 }
 
-/* Faster carousel on mobile */
+/* --------- TRUST CAROUSEL — MOBILE TUNING --------- */
 @media (max-width: 768px) {
-  .carousel-track {
-    animation-duration: 15s; /* was 45s — more than 2x faster */
+
+  .trust-track {
+    gap: 24px; /* antes 40px, menos aire = más logos visibles */
+  }
+
+  .trust-logo-card {
+    min-width: 180px;   /* antes 220px */
+    padding: 18px 28px; /* un poco más compacto */
   }
 }
+
 
 
 /* ==============
@@ -1925,6 +1932,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
 
