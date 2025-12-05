@@ -1731,6 +1731,72 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     }
 }
 
+/* ============================
+   FAQ ACCORDION - Premium Fade + Slide
+   ============================ */
+
+.section-faq {
+    padding: 80px 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Chevron icon */
+.faq-item h3::after {
+    content: "⌄";
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.faq-item.open h3::after {
+    transform: rotate(180deg);
+}
+
+/* Answer animation wrapper */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: 
+        max-height 0.35s ease,
+        opacity 0.35s ease,
+        margin-top 0.35s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 600px; /* enough for longest answer */
+    opacity: 1;
+    margin-top: 12px;
+}
 
 
 /* ==============
@@ -1852,6 +1918,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
 
