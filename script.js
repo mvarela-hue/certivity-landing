@@ -1,13 +1,31 @@
 // ======================================================================
-// SAFE FORM VALIDATION
+// FORM HANDLING – Inline Success Message
 // ======================================================================
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
+  const formSuccess = document.querySelector(".form-success");
+
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Your request has been submitted. A specialist will contact you shortly.");
+
+    // Simple pseudo-validation placeholder; real validation would go here
+
+    // Hide form, show success card
+    contactForm.style.display = "none";
+
+    if (formSuccess) {
+      formSuccess.style.display = "block";
+      formSuccess.classList.add("show");
+
+      // Scroll into view nicely on mobile
+      formSuccess.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
   });
 }
+
 
 
 
@@ -319,5 +337,6 @@ document.querySelectorAll(".faq-item").forEach(item => {
 // ======================================================================
 // END OF FILE
 // ======================================================================
+
 
 
