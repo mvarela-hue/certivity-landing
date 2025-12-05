@@ -272,9 +272,26 @@ function activateFormSubmitPulse() {
 window.addEventListener("load", activateFormSubmitPulse);
 
 
+// ============================
+// FAQ Accordion Functionality
+// ============================
+
+document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+        
+        // Close others (optional for cleaner UX)
+        document.querySelectorAll(".faq-item").forEach(i => {
+            if (i !== item) i.classList.remove("open");
+        });
+
+        // Toggle this one
+        item.classList.toggle("open");
+    });
+});
 
 
 
 // ======================================================================
 // END OF FILE
 // ======================================================================
+
