@@ -1679,9 +1679,11 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     /* Center and shrink logo */
     .logo-img {
     grid-column: 1 / 3;      /* ocupa las 2 columnas */
-    justify-self: center;
     width: 130px;
     height: auto;
+    display: block;
+    margin: 0 auto !important;
+    justify-self: center !important;
   }
 
     /* Hide main navigation on mobile (optional but recommended) */
@@ -1758,6 +1760,7 @@ box-shadow: 0 8px 14px rgba(0,0,0,0.10);
     transform: translateX(340px);
   }
 }
+
 
 
 
