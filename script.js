@@ -289,9 +289,35 @@ document.querySelectorAll(".faq-item").forEach(item => {
     });
 });
 
+// ======================================================================
+// TRUST CAROUSEL – MOBILE SPEED TUNING
+// ======================================================================
+(function () {
+  const track = document.querySelector(".trust-track");
+  if (!track) return;
+
+  const mq = window.matchMedia("(max-width: 768px)");
+
+  function applyCarouselSpeed(e) {
+    if (e.matches) {
+      // Mobile: much faster
+      track.style.animationDuration = "10s"; // was 18s/45s
+    } else {
+      // Desktop: smooth but not too slow
+      track.style.animationDuration = "18s";
+    }
+  }
+
+  // Initial run
+  applyCarouselSpeed(mq);
+
+  // Listen to viewport changes
+  mq.addEventListener("change", applyCarouselSpeed);
+})();
 
 
 // ======================================================================
 // END OF FILE
 // ======================================================================
+
 
